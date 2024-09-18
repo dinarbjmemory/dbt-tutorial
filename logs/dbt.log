@@ -1,0 +1,73 @@
+[0m15:34:20.589321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF9735E890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF98F5D5D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF9A035F10>]}
+
+
+============================== 15:34:20.593321 | bc369688-2b3e-4fc6-aa3e-b8d146b9ace6 ==============================
+[0m15:34:20.593321 [info ] [MainThread]: Running with dbt=1.8.6
+[0m15:34:20.593321 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\DinaRabenjamina\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init jaffle_shop', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:34:20.614321 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/DinaRabenjamina/.dbt')}
+[0m15:34:20.615321 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:34:20.618324 [debug] [MainThread]: Starter project path: C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\include\starter_project
+[0m15:34:20.657329 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:34:20.658322 [info ] [MainThread]: Setting up your profile.
+[0m15:34:59.269243 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m15:34:59.269243 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m15:34:59.270237 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m15:35:05.290807 [error] [MainThread]: Encountered an error:
+
+[0m15:35:05.299717 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\cli\requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\cli\requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\cli\main.py", line 470, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\task\init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\task\init.py", line 263, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\task\init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\task\init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\dbt\task\init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DinaRabenjamina\anaconda3\envs\dbt\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:35:05.300721 [debug] [MainThread]: Command `dbt init` failed at 15:35:05.300721 after 44.77 seconds
+[0m15:35:05.301716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF93A02950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF9A080F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF93CDC8D0>]}
+[0m15:35:05.302719 [debug] [MainThread]: Flushing usage events
+[0m15:35:10.699252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B913769810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9137B3290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9137B1F50>]}
+
+
+============================== 15:35:10.703252 | c7246267-0de1-4883-80b1-368794975492 ==============================
+[0m15:35:10.703252 [info ] [MainThread]: Running with dbt=1.8.6
+[0m15:35:10.704255 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\DinaRabenjamina\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init jaffle_shop', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:35:10.718253 [info ] [MainThread]: A project called jaffle_shop already exists here.
+[0m15:35:10.720252 [debug] [MainThread]: Command `dbt init` succeeded at 15:35:10.719272 after 0.07 seconds
+[0m15:35:10.720252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B90D212950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B9137B0950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B90D35BB90>]}
+[0m15:35:10.721252 [debug] [MainThread]: Flushing usage events
